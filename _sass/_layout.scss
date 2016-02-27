@@ -1,0 +1,51 @@
+body.home {
+  text-align: center;
+
+  img {
+    vertical-align: text-top;
+  }
+}
+
+
+$photo-unit-width:  292px;
+$photo-unit-height: 215px;
+$photo-margin-horizontal: 24px;
+$photo-margin-vertical: 22px;
+$columns: 4;
+$rows: 10;
+
+.photos {
+  position: relative;
+  margin: 0 auto;
+  width: ($columns - 1) * $photo-margin-horizontal + $columns * $photo-unit-width;
+
+  img {
+    position: absolute;
+
+    opacity:0;
+
+    & {
+      width: $photo-unit-width;
+      height: $photo-unit-height;
+    }
+    &.dw { width: 2 * $photo-unit-width + $photo-margin-horizontal; }
+    &.dh { height: 2 * $photo-unit-height + $photo-margin-vertical; }
+
+    @for $i from 1 through $columns {
+      &.c#{$i} {
+        left: ($i - 1) * ($photo-unit-width + $photo-margin-horizontal);
+      }
+    }
+
+    @for $i from 1 through $rows {
+      &.r#{$i} {
+        top: ($i - 1) * ($photo-unit-height + $photo-margin-vertical)
+      }
+    }
+
+    &.show {
+      opacity: 1;
+      transition: opacity 1.5s;
+    }
+  }
+}

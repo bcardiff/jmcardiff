@@ -23,6 +23,12 @@ $rows: 10;
     height: $photo-unit-height + $photo-margin-vertical;
     width: 100%;
     margin: 0;
+
+    @for $i from 1 through $rows {
+      &:nth-child(#{$i}) {
+        top: ($i - 1) * ($photo-unit-height + $photo-margin-vertical);
+      }
+    }
   }
 
   img {
@@ -38,12 +44,6 @@ $rows: 10;
     @for $i from 1 through $columns {
       &.c#{$i} {
         left: ($i - 1) * ($photo-unit-width + $photo-margin-horizontal);
-      }
-    }
-
-    @for $i from 1 through $rows {
-      &.r#{$i} {
-        top: ($i - 1) * ($photo-unit-height + $photo-margin-vertical)
       }
     }
   }

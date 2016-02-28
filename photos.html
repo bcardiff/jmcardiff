@@ -4,22 +4,45 @@ layout: default
 
 <div class="photos anim">
   <div class="row">
-    <img class="c1 r1" src="http://lorempixel.com/292/215/people"/>
-    <img class="c2 r1" src="http://lorempixel.com/292/215/fashion"/>
-    <img class="c3 r1 dh" src="http://lorempixel.com/292/452/people"/>
-    <img class="c4 r1" src="http://lorempixel.com/292/215/fashion"/>
+    {% include photo.html class="c1"
+      thumb="http://lorempixel.com/292/215/people/4"
+      full="http://lorempixel.com/800/600/people/4" %}
+
+    {% include photo.html class="c2"
+      thumb="http://lorempixel.com/292/215/fashion/7"
+      full="http://lorempixel.com/800/600/fashion/7" %}
+
+    {% include photo.html class="c3 dh"
+      thumb="http://lorempixel.com/292/452/people/2"
+      full="http://lorempixel.com/800/600/people/2" %}
+
+    {% include photo.html class="c4"
+      thumb="http://lorempixel.com/292/215/fashion/1"
+      full="http://lorempixel.com/800/600/fashion/1" %}
   </div>
 
   <div class="row">
-    <img class="c1 r2 dh" src="http://lorempixel.com/292/452/sports"/>
-    <img class="c2 r2" src="http://lorempixel.com/292/215/people"/>
+    {% include photo.html class="c1 dh"
+      thumb="http://lorempixel.com/292/452/sports/2"
+      full="http://lorempixel.com/800/600/sports/2" %}
 
-    <img class="c4 r2" src="http://lorempixel.com/292/215/sports"/>
+    {% include photo.html class="c2"
+      thumb="http://lorempixel.com/292/452/people/8"
+      full="http://lorempixel.com/800/600/people/8" %}
+
+    {% include photo.html class="c4"
+      thumb="http://lorempixel.com/292/452/sports/3"
+      full="http://lorempixel.com/800/600/sports/3" %}
   </div>
 
   <div class="row">
-    <img class="c2 r3" src="http://lorempixel.com/292/215/people"/>
-    <img class="c3 r3 dw dh" src="http://lorempixel.com/292/215/people"/>
+    {% include photo.html class="c2"
+      thumb="http://lorempixel.com/292/452/people/7"
+      full="http://lorempixel.com/800/600/people/7" %}
+
+    {% include photo.html class="c3 dw dh"
+      thumb="http://lorempixel.com/292/452/people/9"
+      full="http://lorempixel.com/800/600/people/9" %}
   </div>
 
   <div class="row">

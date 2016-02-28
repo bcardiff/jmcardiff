@@ -7,8 +7,13 @@
   <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
 
   <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/components/jquery-fullsizable/css/jquery-fullsizable.css" | prepend: site.baseurl }}">
+  <link rel="stylesheet" href="{{ "/components/jquery-fullsizable/css/jquery-fullsizable-theme.css" | prepend: site.baseurl }}">
+
   <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
 
   <script src="//code.jquery.com/jquery-2.2.1.min.js"></script>
+  <script src="{{ "/components/jquery-fullsizable/js/jquery.fullsizable.2.0.2.min.js" | prepend: site.baseurl }}"></script>
+
   <script src="{{ "/js/main.js" | prepend: site.baseurl }}"></script>
 </head>

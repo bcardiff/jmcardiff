@@ -19,10 +19,14 @@ $rows: 10;
   margin: 0 auto;
   width: ($columns - 1) * $photo-margin-horizontal + $columns * $photo-unit-width;
 
+  .row {
+    height: $photo-unit-height + $photo-margin-vertical;
+    width: 100%;
+    margin: 0;
+  }
+
   img {
     position: absolute;
-
-    opacity:0;
 
     & {
       width: $photo-unit-width;
@@ -42,10 +46,16 @@ $rows: 10;
         top: ($i - 1) * ($photo-unit-height + $photo-margin-vertical)
       }
     }
+  }
 
-    &.show {
-      opacity: 1;
-      transition: opacity 1.5s;
+  &.anim {
+    img {
+      opacity:0;
+
+      &.show {
+        opacity: 1;
+        transition: opacity 1.5s;
+      }
     }
   }
 }

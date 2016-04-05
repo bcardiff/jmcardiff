@@ -12,7 +12,7 @@ $photo-unit-height: 215px;
 $photo-margin-horizontal: 24px;
 $photo-margin-vertical: 22px;
 $columns: 4;
-$rows: 10;
+$rows: 20;
 
 .photos {
   position: relative;
@@ -42,7 +42,7 @@ $rows: 10;
     &.dh { height: 2 * $photo-unit-height + $photo-margin-vertical; }
 
     @for $i from 1 through $columns {
-      &.c#{$i} {
+      &.c#{$i - 1} {
         left: ($i - 1) * ($photo-unit-width + $photo-margin-horizontal);
       }
     }

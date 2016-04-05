@@ -1,7 +1,9 @@
 $(function(){
-  $(".photos.anim img").load(function(){
-    $(this).addClass('show');
-  })
+  $(".photos.anim img").each(function(){
+    window.setTimeout(function(){
+      $(this).addClass('show');
+    }.bind(this), Math.random() * 700);
+  });
 
   $('a.fullsizable').fullsizable({
     detach_id: 'wrapper'

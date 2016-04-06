@@ -42,7 +42,7 @@ $rows: 20;
     &.dh { height: 2 * $photo-unit-height + $photo-margin-vertical; }
 
     @for $i from 1 through $columns {
-      &.c#{$i - 1} {
+      &.c#{$i} {
         left: ($i - 1) * ($photo-unit-width + $photo-margin-horizontal);
       }
     }

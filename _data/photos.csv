@@ -1,33 +1,9 @@
-file,cols,rows
-IMG_0252.jpg,1,1
-IMG_6396.jpg,1,1
-IMG_0237.jpg,1,2
-IMG_3999_1.jpg,1,1
-IMG_7833.jpg,1,1
-German-IMG_0147.jpg,1,1
-
-IMG_2142.jpg,1,1
-mistral jpg baja.jpg,1,1
-IMG_2861.jpg,1,1
-prensa 0862.jpg,2,2
-
-IMG_8080.jpg,2,2
-
-
-
-
-
-95.jpg,1,2
-alan_1_a.jpg,1,1
-IMG_9235.jpg,1,2
-IMG_8648.jpg,1,1
-
-10_a.jpg,1,2
-
-IMG_0050-b.jpg,2,2
-
-
-IMG_7152.jpg,1,1
-
-
-IMG_9608.jpg,1,1
+c0,c1,c2,c3
+1x1/IMG_0252.jpg        ,1x1/IMG_6396.jpg       ,1x2/IMG_0237.jpg   ,1x1/IMG_3999_1.jpg
+1x1/IMG_7833.jpg        ,1x1/German-IMG_0147.jpg,                   ,1x1/IMG_2142.jpg
+1x1/mistral jpg baja.jpg,1x1/IMG_2861.jpg       ,2x2/prensa 0862.jpg,
+2x2/IMG_8080.jpg        ,                       ,                   ,
+                        ,                       ,1x2/95.jpg         ,1x1/alan_1_a.jpg
+1x2/IMG_9235.jpg        ,1x1/IMG_8648.jpg       ,                   ,1x2/10_a.jpg
+                        ,2x2/IMG_0050-b.jpg     ,                   ,
+1x1/IMG_7152.jpg        ,                       ,                   ,1x1/IMG_9608.jpg

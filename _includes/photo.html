@@ -1,3 +1,12 @@
-<a class="fullsizable" href="{{ include.full }}">
-  <img class="{{ include.class }}" src="{{ include.thumb }}"/>
-</a>
+{% capture photo %}{{include.photo | strip }}{% endcapture %}
+{% if photo != "" %}
+  {% capture width %}{{photo | slice 1, 0 }}{% endcapture %}
+  {% capture height %}{{photo | slice 1, 2 }}{% endcapture %}
+  {% capture css_class %}{{include.col}}{% if height == "2" %} dh{% endif %}{% if width == "2" %} dw{% endif %}{% endcapture %}
+  {% capture prefix %}{{width}}x{{height}}/{% endcapture %}
+  {% capture full %}/photos/hq/{{photo | remove_first: prefix }}{% endcapture %}
+  {% capture thumb %}/photos/thumb/{{photo}}{% endcapture %}
+  <a class="fullsizable" href="{{ full }}">
+    <img class="{{ css_class }}" src="{{ thumb }}"/>
+  </a>
+{% endif %}

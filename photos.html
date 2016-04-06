@@ -2,24 +2,20 @@
 layout: default
 ---
 <div class="photos anim">
-  <div class="row">
-    {% for photo in site.data.photos %}
-    {% capture css_class %}c{{forloop.index0 | modulo:4}}{% if photo.rows == "2" %} dh{% endif %}{% if photo.cols == "2" %} dw{% endif %}{% endcapture %}
-
-    {% if photo.file %}
-    <a class="fullsizable" href="/photos/hq/{{photo.file}}">
-      <img class="{{css_class}}" src="/photos/thumb/{{photo.cols}}x{{photo.rows}}/{{photo.file}}" />
-    </a>
-    {% endif %}
-
-    {% capture col_mod_4 %}{{forloop.index0 | modulo:4}}{% endcapture %}
-    {% if col_mod_4 == "3" %}
-      </div>
-      <div class="row">
-    {% endif %}
+  {% for photo_row in site.data.photos %}
+    <div class="row">
+      {% include photo.html col="c1" photo=photo_row.c0 %}
+      {% include photo.html col="c2" photo=photo_row.c1 %}
+      {% include photo.html col="c3" photo=photo_row.c2 %}
+      {% include photo.html col="c4" photo=photo_row.c3 %}
+    </div>
   {% endfor %}
   </div>
 
   <div class="row">
   </div>
 </div>
+
+<br/>
+<br/>
+<br/>

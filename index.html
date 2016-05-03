@@ -1,6 +1,21 @@
 ---
-layout: empty
-body_class: home
+layout: default
 ---
+<div class="photos anim">
+  {% for photo_row in site.data.photos %}
+    <div class="row">
+      {% include photo.html col="c1" photo=photo_row.c0 %}
+      {% include photo.html col="c2" photo=photo_row.c1 %}
+      {% include photo.html col="c3" photo=photo_row.c2 %}
+      {% include photo.html col="c4" photo=photo_row.c3 %}
+    </div>
+  {% endfor %}
+  </div>
 
-<img src="images/web.jpg"/>
+  <div class="row">
+  </div>
+</div>
+
+<br/>
+<br/>
+<br/>

@@ -6,6 +6,52 @@ body.home {
   }
 }
 
+body {
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+
+  h1 {
+    font-weight: 400;
+  }
+
+  p {
+    font-weight: 200;
+    text-align: justify;
+    line-height: 1.3em;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  ul {
+    padding-left: 0px;
+
+    li {
+      list-style: none;
+    }
+  }
+}
+
+ul#nav {
+  position: absolute;
+  top: 81px;
+
+  li {
+    list-style: none;
+    display: inline;
+    a {
+      position: relative;
+      line-height: 1em;
+      padding-right: 6px;
+      padding-left: 0px;
+    }
+  }
+}
 
 $photo-unit-width:  292px;
 $photo-unit-height: 215px;
@@ -29,6 +75,16 @@ $rows: 20;
         top: ($i - 1) * ($photo-unit-height + $photo-margin-vertical);
       }
     }
+
+    @for $i from 1 through $columns {
+      > .c#{$i} {
+        position: absolute;
+        width: $photo-unit-width;
+        height: $photo-unit-height;
+        left: ($i - 1) * ($photo-unit-width + $photo-margin-horizontal);
+      }
+    }
+
   }
 
   img {
@@ -58,4 +114,47 @@ $rows: 20;
       }
     }
   }
+}
+
+
+.centered {
+  .page-content {
+    width: $photo-unit-width * 4 + $photo-margin-horizontal * 3;
+    margin: 0 auto;
+  }
+
+  #wrapper {
+    margin: 0 auto;
+    width: $photo-unit-width * 2 + $photo-margin-horizontal;
+  }
+
+  ul {
+    li {
+      a, span+span {
+        line-height: 40px;
+        position: absolute;
+        padding-left: 7px;
+        white-space: nowrap;
+      }
+    }
+  }
+}
+
+.icon-mail, .icon-phone, .icon-map {
+  width: 36px;
+  height: 40px;
+  background: url(/images/icons.png) 0 0;
+  display: inline-block;
+}
+
+.icon-mail {
+  background-position: 0px -40px;
+}
+
+.icon-phone {
+  background-position: 0px -80px;
+}
+
+.icon-map {
+  background-position: 0px -160px;
 }

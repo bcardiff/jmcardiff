@@ -89,6 +89,7 @@ $rows: 20;
 
   img {
     position: absolute;
+    opacity: 1;
 
     & {
       width: $photo-unit-width;
@@ -111,6 +112,10 @@ $rows: 20;
       &.show {
         opacity: 1;
         transition: opacity 1.5s;
+      }
+
+      &:hover {
+        opacity: 0.65;
       }
     }
   }

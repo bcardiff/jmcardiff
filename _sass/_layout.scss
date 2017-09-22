@@ -163,3 +163,19 @@ $rows: 20;
 .icon-map {
   background-position: 0px -160px;
 }
+
+#snappr {
+  margin: 0 auto;
+  width: $photo-unit-width * 4 + $photo-margin-horizontal * 3;
+  p {
+    display: inline-block;
+    width: $photo-unit-width * 4 + $photo-margin-horizontal * 3;
+    text-align: right;
+    color: #bbb;
+    font-style: italic;
+    a, a:hover, a:active {
+      font-weight: normal;
+      color: black;
+    }
+  }
+}

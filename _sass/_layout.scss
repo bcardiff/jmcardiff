@@ -165,17 +165,17 @@ $rows: 20;
 }
 
 #snappr {
-  margin: 0 auto;
+  margin: 70px auto;
   width: $photo-unit-width * 4 + $photo-margin-horizontal * 3;
   p {
+    font-size: 13px;
     display: inline-block;
     width: $photo-unit-width * 4 + $photo-margin-horizontal * 3;
-    text-align: right;
+    text-align: center;
     color: #bbb;
-    font-style: italic;
     a, a:hover, a:active {
       font-weight: normal;
-      color: black;
+      color: #666;
     }
   }
 }
